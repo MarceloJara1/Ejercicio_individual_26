@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/wave">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenido"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        android:textColor="@color/md_theme_light_onPrimary"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:checkedButton="@+id/radio_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="20dp"
+        >
+        <RadioButton
+            android:id="@+id/radioSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ver_saldo"/>
+        <RadioButton
+            android:id="@+id/radioDeposito"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/depositar"/>
+        <RadioButton
+            android:id="@+id/radioRetiro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/retirar"/>
+        <RadioButton
+            android:id="@+id/radioSalir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/salir"/>
+
+    </RadioGroup>
+        <LinearLayout
+            android:id="@+id/saldoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saldo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+            />
+
+            <TextView
+                android:id="@+id/saldoValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldDeposito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saldo"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldRetiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saldo"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejercicio individual 26</string>
+    <string name="bienvenido">Bienvenido al banco PN</string>
+    <string name="ver_saldo">Ver saldo</string>
+    <string name="depositar">Depositar</string>
+    <string name="retirar">Retirar</string>
+    <string name="salir">Salir</string>
+    <string name="saldo">Saldo</string>
+    <string name="ok">OK</string>
+</resources>
